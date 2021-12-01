@@ -21,7 +21,7 @@
                         <p><b>Contact Phone:</b> {{ $client->contactPhone }}</p>
                         <p class="mb-3"><b>Notes:</b> {{ $client->notes }} </p>
                         <div class="text-center">
-                            <p>Are you sure you want to delete this category?</p>
+                            <p>Are you sure you want to delete this client?</p>
                             <a href="/client/{{ $client->id }}/delete/confirm" class="btn btn-success my-2 border">Yes</a>
                             <a href="/client/{{ $client->id }}" class="btn btn-danger my-2 mx-4 border">No</a>
                         </div>
