@@ -19,7 +19,9 @@
                 </li> 
                 @endguest
                 @auth
-
+                <li class="nav-item">
+                    <a href="/dashboard" class="nav-link">{{ Auth::user()->name }}</a>
+                </li> 
                 @endauth
             </ul>
         </div>
