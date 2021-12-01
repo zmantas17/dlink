@@ -1,7 +1,7 @@
 @extends('main')
 @section('content')
     <div class="container">
-        <form action="store-client" method="POST" class="mt-5" enctype="multipart/form-data">
+        <form action="store-client" method="POST" class="mt-5">
             @csrf
             @include("_partials/errors")
             <h5 class="text-center" style="font-size:200%">Fill out the form!</h5>
