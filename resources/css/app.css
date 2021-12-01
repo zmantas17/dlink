@@ -1,3 +1,41 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+header.header{
+    background-image: url("https://images.unsplash.com/photo-1446451933985-0b67d5a32375?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cm9hZCUyMGJsdXJ8ZW58MHx8MHx8&w=1000&q=80");
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.spaces{
+    padding-top: 13%;
+}
+.space{
+    font-size: 1.65rem;
+}
+.space a{
+    font-size: 2rem;
+}
+
+.space-top{
+    margin-top: 10%;
+}
+
+.btn-dlink {
+    background-color: #2b8ca1;
+}
+
+.fadeOut {
+    transition-duration: 150ms;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+.fadeIn {
+    transition-duration: 150ms;
+    opacity: 1;
+    height: 50px;
+}
