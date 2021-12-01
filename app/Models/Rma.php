@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Rma extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'address', 'phone', 'email', 'contactName', 'contactPhone', 'notes', 'owner'];
+    protected $fillable = ['name', 'phone', 'deviceProductNumber', 'deviceSerialNumber', 'description'];
 }
