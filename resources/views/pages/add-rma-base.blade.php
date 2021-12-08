@@ -4,7 +4,7 @@
         <form action="store-rma-base" method="POST" class="mt-5">
             @csrf
             @include("_partials/errors")
-            <h5 class="text-center" style="font-size:200%">Fill out the form!</h5>
+            <h5 class="text-center" style="font-size:200%">RMA Register</h5>
 
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
