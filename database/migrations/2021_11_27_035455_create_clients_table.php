@@ -13,7 +13,6 @@ class CreateClientsTable extends Migration
      */
     public function up()
     {
-        // TODO: Pakeisti note i text tipta
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -22,8 +21,9 @@ class CreateClientsTable extends Migration
             $table->string('email');
             $table->string('contactName');
             $table->string('contactPhone');
-            $table->string('notes');
+            $table->text('notes');
             $table->string('owner');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
