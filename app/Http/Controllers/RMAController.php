@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rma;
-use DB;
+use Auth;
 use Illuminate\Http\Request;
 
 class RMAController extends Controller
@@ -23,7 +23,7 @@ class RMAController extends Controller
         return view('pages.add-rma-base');
     }
 
-    public function storeRmaBase(Request $request, Rma $rma)
+    public function storeRmaBase(Request $request)
     {
             $validated = $request->validate([
                 'name' => 'required|max:255',
@@ -39,9 +39,11 @@ class RMAController extends Controller
                 'deviceProductNumber' => request('deviceProductNumber'),
                 'deviceSerialNumber' => request('deviceSerialNumber'),
                 'description' => request('description'),
+                'owner' => Auth::id(),
             ]);
-            return redirect('/');
+            return redirect('/rma');
     }
+
     public function viewRemoveRmaBaseForm(Rma $rma) 
     {
             return view('pages.view-base-remove', compact('rma'));
@@ -73,9 +75,8 @@ class RMAController extends Controller
             return redirect('/rma');
     }
 
-    public function viewRmaBase(Rma $rma){
+    public function viewRmaBase(Rma $rma)
+    {
         return view("pages.view-rma-base", compact('rma'));
     }
-
-
 }
