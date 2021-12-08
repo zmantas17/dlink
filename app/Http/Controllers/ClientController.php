@@ -53,7 +53,7 @@ class ClientController extends Controller
     
     public function viewRemoveClientForm(Client $client) 
     {
-            return view('pages.view-remove', compact('client'));
+            return view('pages.view-remove-client', compact('client'));
     }
 
     public function deleteClientForm(Client $client)
