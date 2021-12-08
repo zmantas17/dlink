@@ -26,7 +26,7 @@ class ClientController extends Controller
         return view('pages.add-client');
     }
 
-    public function storeClient(Request $request, Client $client)
+    public function storeClient(Request $request)
     {
             $validated = $request->validate([
                 'name' => 'required|max:255',
@@ -48,7 +48,7 @@ class ClientController extends Controller
                 'notes' => request('notes'),
                 'owner' => Auth::id()
             ]);
-            return redirect('/');
+            return redirect('/clients');
 }
     
     public function viewRemoveClientForm(Client $client) 
@@ -89,10 +89,9 @@ class ClientController extends Controller
     {
         return redirect('/search-client/' . $request->get('search-string'));
     }
-
     public function searchClient($searchString)
     {
-        $clients = Client::where(DB::raw('lower(name)'), strtolower($searchString))->get();
+        $clients = Client::where(DB::raw('lower(name)'), 'LIKE', '%' . strtolower($searchString) . '%')->get();
 
 
         return view('pages.view-clients', compact('clients'));
