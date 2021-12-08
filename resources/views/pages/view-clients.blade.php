@@ -45,6 +45,7 @@
                                 <div class="col-sm-4"></div>
                                 <div class="col-sm-4">
                                     <a href="/client/{{ $client->id }}/delete/ask" class="btn btn-sm btn-danger "><i class="fas fa-trash"></i></a>
+
                                     <a href="/client/{{ $client->id }}/edit" class="btn btn-sm btn-warning "><i class="fas fa-pen"></i></a>
                                 </div>
                                 <div class="col-sm-4">
