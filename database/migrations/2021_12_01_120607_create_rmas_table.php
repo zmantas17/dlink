@@ -20,6 +20,8 @@ class CreateRmasTable extends Migration
             $table->string('deviceProductNumber');
             $table->string('deviceSerialNumber');
             $table->text('description');
+            $table->string('owner');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

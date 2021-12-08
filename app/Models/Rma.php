@@ -9,5 +9,5 @@ class Rma extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'phone', 'deviceProductNumber', 'deviceSerialNumber', 'description'];
+    protected $fillable = ['name', 'phone', 'deviceProductNumber', 'deviceSerialNumber', 'description', 'owner'];
 }
