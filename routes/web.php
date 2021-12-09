@@ -58,8 +58,9 @@ Route::get('/view-demo-contract/notfinished', [DemoBaseController::class, 'notFi
 Route::get('/serial-number', [SerialNumberController::class, 'viewSerialNumber']);
 Route::post('/store-serial-number', [SerialNumberController::class, 'storeSNFile']);
 
-// Dashboard
+// Admin Panel
 Route::get('/dashboard', [DLinkController::class, 'dashboard'])->name('dashboard');
+Route::get('/', [DLinkController::class, 'main'])->name('main');
 
 // Logout
 Route::group(['middleware' => ['auth']], function() {

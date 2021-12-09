@@ -21,6 +21,10 @@ class DLinkController extends Controller
     {
         return view('dashboard');
     }
+    public function main() 
+    {
+        return view('pages.home');
+    }
 
     public function perform()
     {
