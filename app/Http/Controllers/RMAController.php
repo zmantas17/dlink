@@ -14,7 +14,7 @@ class RMAController extends Controller
     }
 
     public function viewRmaBases(){
-        $rmas = Rma::all();
+        $rmas = Rma::paginate(5);
         return view('pages.view-all-rma-bases', compact('rmas'));
     }
 

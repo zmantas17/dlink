@@ -63,7 +63,7 @@ class DemoBaseController extends Controller
     }
 
     public function viewDemoContract(){
-        $contracts = DemoContract::all();
+        $contracts = DemoContract::paginate(5);
         return view("pages.view-demo-contracts", compact('contracts'));
     }
 
@@ -83,11 +83,11 @@ class DemoBaseController extends Controller
     }
 
     public function finishedDemoContract(){
-        $contracts = DemoContract::where('status', True)->get();
+        $contracts = DemoContract::where('status', True)->paginate(5);
         return view("pages.view-demo-contracts", compact('contracts'));
     }
     public function notFinishedDemoContract(){
-        $contracts = DemoContract::where('status', False)->get();
+        $contracts = DemoContract::where('status', False)->paginate(5);
         return view("pages.view-demo-contracts", compact('contracts'));
     }
 

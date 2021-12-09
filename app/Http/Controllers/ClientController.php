@@ -17,7 +17,7 @@ class ClientController extends Controller
 
     public function allClients()
     {
-        $clients = Client::all();
+        $clients = Client::paginate(5);
         return view('pages.view-clients', compact('clients'));
     }
 
@@ -91,7 +91,7 @@ class ClientController extends Controller
     }
     public function searchClient($searchString)
     {
-        $clients = Client::where(DB::raw('lower(name)'), 'LIKE', '%' . strtolower($searchString) . '%')->get();
+        $clients = Client::where(DB::raw('lower(name)'), 'LIKE', '%' . strtolower($searchString) . '%')->paginate(5);
 
 
         return view('pages.view-clients', compact('clients'));
