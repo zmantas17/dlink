@@ -1,4 +1,5 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="{{ url()->previous() }}" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
     <div class="container">
         <form action="store-rma-base" method="POST" class="mt-5">
@@ -33,7 +34,7 @@
             </div>
 
             <div class="text-center">
-                <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                <button type="submit" class="btn rma-base-form-btn mb-3">Submit</button>
             </div>
             
         </form>

@@ -1,9 +1,7 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="{{ url()->previous() }}" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
 <div class="container mt-5">
-    <div class="text-right mb-3">
-        <a href="/add-rma-base" class="btn btn-success ">Add <i class="fas fa-plus-circle"></i></a>
-    </div>
     <div class="accordion text-dark" id="accordionExample">
             <div class="accordion-item mb-2">
                 <h2 class="accordion-header" id="headingTwo">

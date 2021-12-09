@@ -1,4 +1,5 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="{{ url()->previous() }}" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
 <div class="container mt-5">
     <div class="text-right mb-3">

@@ -1,10 +1,11 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="{{ url()->previous() }}" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
     <div class="container">
-        <form action="store-demo-device" method="POST" class="mt-5">
+        <form action="store-demo-device" method="POST" class="mt-2">
             @csrf
             @include("_partials/errors")
-            <h5 class="text-center" style="font-size:200%">Add demo device</h5>
+            <h5 class="text-center mb-4" style="font-size:200%">Add demo device</h5>
 
             <div class="mb-3">
                 <label for="deviceProductNumber" class="form-label">Device P/N</label>
@@ -22,7 +23,7 @@
             </div>
 
             <div class="text-center">
-                <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                <button type="submit" class="btn add-demo-device-button mb-3">Submit</button>
             </div>
             
         </form>

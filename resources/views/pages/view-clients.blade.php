@@ -1,13 +1,14 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="/" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
-<div class="container mt-5">
+<div class="container">
     <div class="row">
         <div class="col">
-            <a href="/add-client" class="btn btn-success ">Add <i class="fas fa-plus-circle"></i></a>
+            <a href="/add-client" class="btn clients-add-btn">Add <i class="fas fa-plus-circle"></i></a>
         </div>
         <div class="col">
             <div class="text-right mb-3">
-                <a class="btn btn-dark hover:bg-transparent border-0" id="search-button"><i class="fas fa-search"></i></a>
+                <a class="btn clients-search-btn border-0" id="search-button"><i class="fas fa-search"></i></a>
             </div>
         </div>
     </div>
@@ -57,9 +58,11 @@
                 </div>
             </div>
         @endforeach
+        {{ $clients->links('_partials.links') }}
         <div class="mb-5"></div>
     </div>
 </div>
+
 
 <script>
 

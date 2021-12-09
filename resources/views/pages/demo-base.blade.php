@@ -1,4 +1,5 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="/" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
 <header class="header">
     <div class="container text-center spaced">

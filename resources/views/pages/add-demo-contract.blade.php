@@ -1,10 +1,11 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="{{ url()->previous() }}" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
     <div class="container">
         <form action="store-demo-contract" method="POST" class="mt-5">
             @csrf
             @include("_partials/errors")
-            <h5 class="text-center" style="font-size:200%">Add demo contract device</h5>
+            <h5 class="text-center mb-3" style="font-size:200%">Add demo contract device</h5>
             <div class="mb-3">
                 <label for="client" class="form-label">Client</label>
                 <select class="form-select" name="client" id="client">
@@ -33,7 +34,7 @@
             </div>
 
             <div class="text-center">
-                <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                <button type="submit" class="btn demo-base-contract-btn mb-3">Submit</button>
             </div>
             
         </form>

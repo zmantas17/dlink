@@ -1,10 +1,11 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="{{ url()->previous() }}" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
     <div class="container">
         <form action="store-client" method="POST" class="mt-5">
             @csrf
             @include("_partials/errors")
-            <h5 class="text-center" style="font-size:200%">Fill out the form!</h5>
+            <h5 class="text-center mb-3" style="font-size:200%">Fill out the form!</h5>
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" id="name">
@@ -36,7 +37,7 @@
                 <textarea class="form-control" id="notes" name="notes" rows="4"></textarea>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                <button type="submit" class="btn client-form-btn mb-3">Submit</button>
             </div>
         </form>
     </div>

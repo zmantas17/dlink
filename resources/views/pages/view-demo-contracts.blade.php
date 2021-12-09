@@ -1,16 +1,17 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="/demo-base" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
 <div class="container mt-5">
     <div class="text-center mb-3">
         <div class="flex">
             <div class="flex-auto">
-                <a href="/view-demo-contract" class="btn" style="color: #58dcfa; border: 1px solid #58dcfa;">All</a>
+                <a href="/view-demo-contract" class="btn view-demo-contracts-btn">All</a>
             </div>
             <div class="flex-auto">
-                <a href="/view-demo-contract/finished" class="btn" style="color: #58dcfa; border: 1px solid #58dcfa;">Finished</a>
+                <a href="/view-demo-contract/finished" class="btn view-demo-contracts-btn">Finished</a>
             </div>
             <div class="flex-auto">
-                <a href="/view-demo-contract/notfinished" class="btn" style="color: #58dcfa; border: 1px solid #58dcfa;">Not finished</a>
+                <a href="/view-demo-contract/notfinished" class="btn view-demo-contracts-btn">Not finished</a>
             </div>
         </div>
     </div>
@@ -50,6 +51,7 @@
                 </div>
             </div>
         @endforeach
+        {{ $contracts->links('_partials.links') }}
         <div class="mb-5"></div>
     </div>
 </div>

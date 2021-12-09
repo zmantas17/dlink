@@ -1,15 +1,16 @@
 @extends('main')
+<a class="btn btn-lg bg-transparent text-white" href="/" role="button"><i class="fas fa-arrow-left"></i></a>
 @section('content')
 <div class="container mt-5">
     <div class="row mb-2">
         <div class="col">
-            <a href="/add-rma-base" class="btn btn-success ">Add <i class="fas fa-plus-circle"></i></a>
+            <a href="/add-rma-base" class="btn add-rma-btn">Add <i class="fas fa-plus-circle"></i></a>
         </div>
     </div>
     <div class="accordion text-dark" id="accordionExample">
 
         @foreach($rmas as $rma)        
-            <div class="accordion-item">
+            <div class="accordion-item mb-2">
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion{{ $rma->id }}" aria-expanded="false" aria-controls="accordion{{ $rma->id }}">
                        {{ $rma->id }} || {{ $rma->name }}
@@ -34,6 +35,7 @@
                 </div>
             </div>
         @endforeach
+        {{ $rmas->links('_partials.links') }}
         <div class="mb-5"></div>
     </div>
 </div>
